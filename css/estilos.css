@@ -1,0 +1,190 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body{
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+
+/* ---------------- BARRA DE NAVEGACION ----------------*/
+
+header{
+  width: 100%;
+  height: 100%;
+  background-color: #1e2022;
+}
+
+#btn-menu{
+  display: none;
+}
+
+.label-menu{
+  display: none;
+  width: 46px;
+  height: 46px;
+  padding: 12px;
+  cursor: pointer;
+}
+
+.label-menu:hover{
+  background-color: rgba(0,0,0,0.5);
+}
+
+.icon-menu{
+  font-size: 20px;
+  color: white;
+}
+
+.menu ul{
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.menu li a{
+  display: block;
+  padding: 15px 20px;
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+}
+
+.menu li{
+  transition: all 0.2s;
+}
+
+.menu li:hover{
+  background-color: rgba(0,0,0,0.5);
+}
+
+
+
+/*---------------- FORMULARIO DE REGISTRO ----------------*/
+
+.articulo-centrar{
+  align-self: center;
+}
+
+.form-registro{
+  width: 90%;
+  max-width: 420px;
+  margin: auto;
+  border-radius: 7px;
+  background-color: white;
+  box-shadow: 0px 2px 2px 2px rgb(212, 209, 205);
+}
+
+.registrate{
+  background-color: #1e2022;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  font-weight: normal;
+  font-size: 25px;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+  margin-bottom: 15px;
+}
+
+.contenedor-inputs{
+  padding: 10px 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.input-48{
+  width: 48%;
+}
+
+.input-100{
+  width: 100%;
+}
+
+input{
+  margin-bottom: 15px;
+  padding:10px;
+  border: 0;
+  border-bottom: solid 1px rgb(200, 204, 204);
+}
+
+.btn-registrarme{
+  background-color: #1e2022;
+  color: white;
+  margin: 5px auto;
+  padding: 10px 40px;
+}
+
+.btn-registrarme:hover{
+  cursor: pointer;
+}
+
+.form-link{
+  width: 100%;
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  font-size: 13px;
+  color: #52616b;
+}
+
+.form-link a{
+  color: #1e2022;
+}
+
+/*---------------- FOOTER ----------------*/
+
+footer{
+align-self: flex-end;
+width: 100%;
+padding: 1em;
+text-align: center;
+}
+
+footer a{
+  color: rgb(164, 164, 164);
+  text-decoration: none;
+  display: inline-block;
+  height: 10px;
+  margin: 0px 20px;
+  padding: 2px;
+  box-sizing: border-box;
+}
+
+footer a:hover{
+  color: #1e2022;
+}
+
+
+
+/* ----------------RESPONSIVE ----------------*/
+
+@media (max-width: 414px) {
+  .label-menu{
+    display: block;
+  }
+  .menu{
+    position: absolute;
+    background-color: #1e2022;
+    width: 70%;
+    margin-left: -70%;
+    transition: all 0.5s;
+  }
+  .menu ul{
+    flex-direction: column;
+  }
+  .menu li{
+    border-top: solid 1px #ecf0f1;
+  }
+  #btn-menu:checked ~ .menu{
+    margin: 0;
+  }
+}
