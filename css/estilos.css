@@ -65,24 +65,93 @@ header{
   background-color: rgba(0,0,0,0.5);
 }
 
+/*---------------- PAGINA PRINCIPAL (INDEX) ----------------*/
 
 
-/*---------------- FORMULARIO DE REGISTRO ----------------*/
+
+.articulo{
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.articulo h1{
+  text-align: center;
+  font-size: 38px;
+  margin: 5% 5%;
+}
+
+.contenedor-general{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.contenedor-seccion{
+  width: 32%;
+  margin-bottom: 2%;
+  position: relative;
+  overflow: hidden;
+}
+
+.imagen-30{
+  width: 100%;
+  transition: all 0.5s;
+}
+
+.texto-seccion{
+  position: absolute;
+  bottom: 0;
+  padding: 15px;
+  text-align: justify;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  font-size: 1em;
+
+  transform: translateY(100%);
+
+  transition: all 0.5s;
+}
+
+.texto-seccion h2{
+  font-size: 1.2em;
+}
+
+.texto-seccion p{
+  font-size: 1em;
+}
+
+.contenedor-seccion:hover .texto-seccion{
+  transform: translateY(0);
+}
+
+.contenedor-seccion:hover .imagen-30{
+  transform: scale(1.15);
+}
+
+
+
+
+
+/*---------------- FORMULARIO DE REGISTRO e INGRESO ----------------*/
 
 .articulo-centrar{
   align-self: center;
+  margin-top: 5%;
+  margin-bottom: 5%;
 }
 
-.form-registro{
+.form-registro, .form-ingreso{
   width: 90%;
-  max-width: 420px;
+
+  max-width: 480px;
   margin: auto;
   border-radius: 7px;
   background-color: white;
   box-shadow: 0px 2px 2px 2px rgb(212, 209, 205);
 }
 
-.registrate{
+.registrarme, .ingresa{
   background-color: #1e2022;
   color: white;
   padding: 20px;
@@ -116,14 +185,14 @@ input{
   border-bottom: solid 1px rgb(200, 204, 204);
 }
 
-.btn-registrarme{
+.btn-registrarme, .btn-ingresar{
   background-color: #1e2022;
   color: white;
   margin: 5px auto;
   padding: 10px 40px;
 }
 
-.btn-registrarme:hover{
+.btn-registrarme, .btn-ingresar:hover{
   cursor: pointer;
 }
 
@@ -139,6 +208,26 @@ input{
 .form-link a{
   color: #1e2022;
 }
+
+/*---------------- FORMULARIO DE INGRESO ----------------*/
+
+.input-10{
+  width: 10%;
+  text-align: right;
+  margin-top: 7px;
+}
+
+.input-90{
+  width: 90%;
+  text-align: left;
+  margin-right: 0;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  font-size: 13px;
+  color: #52616b;
+}
+
+
 
 /*---------------- FOOTER ----------------*/
 
@@ -167,7 +256,22 @@ footer a:hover{
 
 /* ----------------RESPONSIVE ----------------*/
 
-@media (max-width: 414px) {
+@media (max-width: 768px) {
+  .contenedor-seccion{
+    width: 48%;
+  }
+}
+
+
+@media (max-width: 650px) {
+  .contenedor-seccion{
+    width: 100%;
+  }
+}
+
+
+
+@media (max-width: 450px) {
   .label-menu{
     display: block;
   }
@@ -177,6 +281,7 @@ footer a:hover{
     width: 70%;
     margin-left: -70%;
     transition: all 0.5s;
+    z-index: 100;
   }
   .menu ul{
     flex-direction: column;
