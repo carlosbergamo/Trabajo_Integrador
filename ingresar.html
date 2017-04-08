@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
     <link rel="stylesheet" href="css/icomoon/style.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <img class="logo"src="imagenes/logo blanco 50px.png" alt="logo houdini 2.0">
   </head>
 
   <body>
@@ -18,20 +20,19 @@
           <li><a href="index.html">Inicio</a></li>
           <li><a href="registracion.html">Registrate</a></li>
           <li><a href="ingresar.html">Ingresa</a></li>
-          <li><a href="preguntas_frecuentes.html">FAQ</a></li>
-          <li><a href="#">Otro</a></li>
+          <li><a href="preguntas_frecuentes.html" class="pregunta__bold">?</a></li>
         </ul>
       </nav>
     </header>
 
     <article class="articulo-centrar">
 
-      <form class="form-ingreso" action="index.html" method="post">
+      <form class="form-ingreso animated bounceInUp" action="index.html" method="post">
       <h2 class="ingresa">Ingresar</h2>
       <div class="contenedor-inputs">
         <input type="text" name="usuario" placeholder="&#128274;    Usuario" class="input-100" required="">
         <input type="password" name="clave" placeholder="&#128273;    Contraseña" class="input-100" required="">
-        <input type="checkbox" name="recordar" class="input-10" required="">
+        <input type="checkbox" name="recordar" class="input-10" id="recordar" required="">
         <label for="recordar" class="input-90">Recordar contraseña</label>
         <input type="submit" value="Ingresar" class="btn-ingresar" required="">
         <p class="form-link">¿olvidaste tu contraseña? <a href="#">ingresa aquí</a></p>
@@ -39,11 +40,12 @@
     </form>
   </article>
 
-    <footer>
-      <a href="#"><span class="icon-facebook"></span></a>
-      <a href="#"><span class="icon-instagram"></span></a>
-      <a href="#"><span class="icon-twitter"></span></a>
-    </footer>
+  <footer>
+    <a href="https://es-la.facebook.com/"><span class="icon-facebook"></span></a>
+    <a href="https://www.instagram.com/"><span class="icon-instagram"></span></a>
+    <a href="https://twitter.com/?lang=es"><span class="icon-twitter"></span></a>
+  </footer>
+
   </body>
 
 </html>
