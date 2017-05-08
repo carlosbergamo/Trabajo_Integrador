@@ -48,9 +48,7 @@ header{
   color: white;
 }
 
-.icon-clubs:hover{
-  color: rgb(222, 161, 24);
-}
+
 
 .menu ul{
   list-style: none;
@@ -84,6 +82,11 @@ header{
   height: 48px;
   top: 0px;
   left: 5px;
+  transition: all 0.4s;
+}
+
+.logo:hover {
+  transform: rotate(15deg);
 }
 
 /*---------------- PAGINA PRINCIPAL (INDEX) ----------------*/
