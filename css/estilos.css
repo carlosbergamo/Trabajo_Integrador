@@ -284,6 +284,15 @@ input:focus{
   color: #1e2022;
 }
 
+.errores{
+  width: 90%;
+  max-width: 480px;
+  margin: auto;
+  background-color: blue;
+  text-align: center;
+}
+
+
 /*---------------- FORMULARIO DE INGRESO ----------------*/
 
 .input-10{
