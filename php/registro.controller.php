@@ -45,6 +45,21 @@ if (count($errores)) {
 if (isset($_POST['recordar'])){
   $cookieName = 'Recordar';
   setcookie($cookieName, "$reg_nombre", time()+ (60 * 60 * 24 * 365));
+<?php session_start();
+
+include('helpers.php');
+
+
+$errorNombre = validarNombre();
+$errorEmail = validarEmail();
+$errorPass = validarPassword();
+
+$errors = [validarnombre(), validarEmail(), validarPassword()];
+
+if(count($erorrs)) {
+  $_SESSION['errors'] = $errors;
+  header('Location: ../registracion.html');
+  exit();
 }
 
 
